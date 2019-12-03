@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mat-list {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.item:hover {
+  font-weight: bold;
+  background: #d9c9f3;
+}

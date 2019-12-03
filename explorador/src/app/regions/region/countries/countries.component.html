@@ -1,0 +1,22 @@
+<div *ngIf="countries; else loading">
+  <mat-list>
+      <div *ngIf="countries.length != 0; else zero">
+          <mat-list-item><strong>Total results: {{ countries.length }}</strong></mat-list-item>
+          <mat-divider></mat-divider>
+      </div>
+      <ng-template #zero>
+          <mat-list-item><strong>Total results: 0</strong></mat-list-item>
+          <mat-divider></mat-divider>
+      </ng-template>
+      <!-- <div *ngFor="let element of countries">
+          <mat-list-item><a [routerLink]="['/country', element.id]">{{ element.id }} - {{ element.name }}</a></mat-list-item>
+          <mat-divider></mat-divider>
+      </div> -->
+      <ex-list [countries]="countries"></ex-list>
+  </mat-list>
+</div>
+<ng-template #loading>
+    <ng-template #loading>
+        <img class="loading" src="https://thumbs.gfycat.com/LoneDetailedFairybluebird-max-1mb.gif">
+    </ng-template>
+</ng-template>

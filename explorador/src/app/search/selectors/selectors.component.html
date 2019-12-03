@@ -1,0 +1,35 @@
+<form [formGroup]="searchForm" novalidate>
+<div class="searchForm">
+<mat-form-field>
+  <mat-label>Incomes</mat-label>
+  <mat-select formControlName="incomes">
+    <mat-option *ngFor="let income of incomes" [value]="income.id">
+      {{income.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Lendings</mat-label>
+  <mat-select formControlName="lendings">
+    <mat-option *ngFor="let lending of lendings" [value]="lending.id">
+      {{lending.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Regions</mat-label>
+  <mat-select formControlName="regions">
+    <mat-option *ngFor="let region of regions" [value]="region.code">
+      {{region.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Search</button>
+</div>
+</form>
+
+
+

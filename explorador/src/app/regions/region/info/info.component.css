@@ -1,0 +1,12 @@
+.mat-card {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.loading {
+  display: block;
+  margin: 0 auto;
+  height: 75px;
+}
+

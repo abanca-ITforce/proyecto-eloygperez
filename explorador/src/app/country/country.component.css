@@ -1,0 +1,16 @@
+.example-card {
+  max-width: 500px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+span {
+  display: block;
+}
+
+h3 {
+  background: #cbbbe6;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px;
+}

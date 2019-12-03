@@ -1,0 +1,7 @@
+<mat-card>Explorador | {{ title }}</mat-card>
+<mat-list>
+    <div *ngFor="let element of regions$ | async">
+        <mat-list-item class="item"><a [routerLink]="element.code">{{ element.name }}</a></mat-list-item>
+        <mat-divider></mat-divider>
+    </div>
+</mat-list>

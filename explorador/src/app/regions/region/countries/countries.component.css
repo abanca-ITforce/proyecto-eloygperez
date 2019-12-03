@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mat-list {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.mat-list-item:hover {
+  font-weight: bold;
+  background: #d9c9f3;
+}
+
+.loading {
+  display: block;
+  margin: 0 auto;
+  height: 75px;
+}
+
+

@@ -1,0 +1,17 @@
+<div *ngIf="info; else loading">
+  <mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar>
+            <mat-icon>flag</mat-icon>
+        </div>
+        <mat-card-title>{{ info.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p><strong>Code: </strong>{{ info.code }}</p>
+        <p><strong>Isocode: </strong>{{ info.iso2code }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<ng-template #loading>
+    <img class="loading" src="https://thumbs.gfycat.com/LoneDetailedFairybluebird-max-1mb.gif">
+</ng-template>

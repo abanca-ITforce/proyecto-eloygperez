@@ -1,0 +1,19 @@
+<div *ngIf="search">
+  <mat-list>
+      <div *ngIf="search.length != 0; else zero">
+          <mat-list-item class="results"><strong>Total results: {{ search.length }}</strong></mat-list-item>
+          <mat-divider></mat-divider>
+      </div>
+      <ng-template #zero>
+          <mat-list-item class="results"><strong>Total results: 0</strong></mat-list-item>
+          <mat-divider></mat-divider>
+      </ng-template>
+      <!-- <div *ngFor="let element of search">
+          <mat-list-item class="item"><a [routerLink]="['/country', element.id]">{{ element.id }} - {{ element.name }}</a></mat-list-item>
+          <mat-divider></mat-divider>
+      </div> -->
+      <ex-list [countries]="search"></ex-list>
+  </mat-list>
+</div>
+
+
