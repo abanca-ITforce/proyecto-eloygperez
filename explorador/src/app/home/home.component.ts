@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit {
   countries$: Observable<any[]>;
 
   constructor(private explorerService: ExplorerService) {
-    this.countries$ = this.explorerService.getAllCountries();
+    this.countries$ = this.explorerService.getAllCountriesFilter();
+    this.explorerService.getAllCountries().subscribe(data => console.log(data));
   }
 
   ngOnInit() {

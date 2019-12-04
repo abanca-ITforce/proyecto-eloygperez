@@ -10,6 +10,7 @@ import { CountriesComponent } from './region/countries/countries.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SharedModule } from '../shared/shared.module';
     MatCardModule,
     MatListModule,
     MatIconModule,
+    MatProgressBarModule,
     SharedModule
   ]
 })

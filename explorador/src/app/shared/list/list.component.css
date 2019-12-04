@@ -9,7 +9,16 @@ a {
   margin-top: 10px;
 }
 
+.mat-list-item {
+  transition: background-color 0.4s;
+}
+
 .mat-list-item:hover {
   font-weight: bold;
   background: #d9c9f3;
+}
+
+.flag {
+  display: inline-block;
+  margin-right: 20px;
 }

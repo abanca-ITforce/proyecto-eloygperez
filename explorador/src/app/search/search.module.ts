@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { SharedModule } from '../shared/shared.module';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     MatDividerModule,
     MatListModule,
+    MatProgressBarModule,
     SharedModule
   ]
 })

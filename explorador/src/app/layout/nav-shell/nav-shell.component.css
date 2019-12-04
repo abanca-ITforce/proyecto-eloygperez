@@ -20,6 +20,10 @@
   margin-right: 10px;
 }
 
+.menu {
+  transition: background-color 0.4s;
+}
+
 .menu:hover {
   background: #673ab7;
   color: white;

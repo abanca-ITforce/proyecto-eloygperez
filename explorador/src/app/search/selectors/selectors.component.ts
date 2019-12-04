@@ -28,4 +28,8 @@ export class SelectorsComponent implements OnInit {
     this.search.emit(this.searchForm.value);
   }
 
+  onReset() {
+    this.searchForm.reset();
+  }
+
 }

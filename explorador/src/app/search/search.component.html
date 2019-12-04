@@ -1,13 +1,13 @@
 <mat-card>Explorador | {{ title }}</mat-card>
+<div *ngIf="loaded">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
 <ex-selectors
   [incomes]="incomes$ | async"
   [lendings]="lendings$ | async"
   [regions]="regions$ | async"
   (search)="onSearch($event)">
 </ex-selectors>
-<div *ngIf="loaded">
-  <img class="loading" src="https://thumbs.gfycat.com/LoneDetailedFairybluebird-max-1mb.gif">
-</div>
 <!-- <ex-result
 [search]="search$ | async">
 </ex-result> -->

@@ -1,8 +1,9 @@
 <mat-card>Explorador | {{ title }}</mat-card>
+<ng-template #empty>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>
 <ex-list
   *ngIf="countries$ | async as countries; else empty"
   [countries]="countries"></ex-list>
 
-<ng-template #empty>
-    <img class="loading" src="https://thumbs.gfycat.com/LoneDetailedFairybluebird-max-1mb.gif">
-</ng-template>
+

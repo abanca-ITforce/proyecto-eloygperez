@@ -3,7 +3,8 @@
     <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar>
-            <mat-icon>flag</mat-icon>
+            <!-- <mat-icon>flag</mat-icon> -->
+            <img class="flag" src="https://www.countryflags.io/{{ country.iso2Code }}/shiny/32.png">
           </div>
           <mat-card-title>Name: {{ country.name }}</mat-card-title>
           <mat-card-subtitle>Region: <a [routerLink]="['/regions', country.region.id]">{{ country.region.value }}</a></mat-card-subtitle>

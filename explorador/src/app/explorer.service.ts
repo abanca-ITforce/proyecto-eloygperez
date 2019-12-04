@@ -14,6 +14,18 @@ export class ExplorerService {
     return this.http.get(this.url).pipe(map(data => data ? data[1] : []));
   }
 
+  getAllCountriesFilter() {
+    return this.http.get(this.url).pipe(map(data => {
+      let finalData = [];
+      data[1].forEach(cur => {
+        if (cur.capitalCity) {
+          finalData.push(cur);
+        }
+      });
+      return finalData;
+    }));
+  }
+
   getCountry(id) {
     return this.http.get(`https://api.worldbank.org/v2/country/${id}?per_page=1000&format=json`)
       .pipe(map(data => data ? data[1][0] : {}));
@@ -61,7 +73,15 @@ export class ExplorerService {
     // tslint:disable-next-line: curly
     if (event.regions) url = `${url}region=${event.regions}&`;
     url = url + 'per_page=1000&format=json';
-    return this.http.get(url).pipe(map(data => data ? data[1] : []));
+    return this.http.get(url).pipe(map(data => {
+      let finalData = [];
+      data[1].forEach(cur => {
+        if (cur.capitalCity) {
+          finalData.push(cur);
+        }
+      });
+      return finalData;
+    }));
   }
 
   getCountryIndicators(cod) {

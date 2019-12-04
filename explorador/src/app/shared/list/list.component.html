@@ -1,6 +1,8 @@
 <mat-list>
   <div *ngFor="let element of countries">
-      <mat-list-item><a [routerLink]="['/country', element.id]">{{ element.id }} - {{ element.name }}</a></mat-list-item>
+      <mat-list-item>
+        <img class="flag" src="https://www.countryflags.io/{{ element.iso2Code }}/shiny/32.png">
+        <a [routerLink]="['/country', element.id]">{{ element.name }}</a></mat-list-item>
       <mat-divider></mat-divider>
   </div>
 </mat-list>
