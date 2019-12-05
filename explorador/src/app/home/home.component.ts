@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private explorerService: ExplorerService) {
     this.countries$ = this.explorerService.getAllCountriesFilter();
-    this.explorerService.getAllCountries().subscribe(data => console.log(data));
   }
 
   ngOnInit() {

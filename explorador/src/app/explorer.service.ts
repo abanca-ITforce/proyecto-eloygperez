@@ -22,7 +22,7 @@ export class ExplorerService {
           finalData.push(cur);
         }
       });
-      return finalData;
+      return this.ordenar(finalData);
     }));
   }
 
@@ -43,7 +43,7 @@ export class ExplorerService {
 
   getRegions() {
     return this.http.get('https://api.worldbank.org/v2/region/?format=json')
-      .pipe(map(data => data ? data[1] : []));
+      .pipe(map(data => data ? this.ordenar(data[1]) : []));
   }
 
   getRegion(cod) {
@@ -53,7 +53,7 @@ export class ExplorerService {
 
   getCountriesOfRegion(cod) {
     return this.http.get(`https://api.worldbank.org/v2/country?region=${cod}&per_page=1000&format=json`)
-       .pipe(map(data => data ? data[1] : []));
+       .pipe(map(data => data ? this.ordenar(data[1]) : []));
   }
 
   search(data) {
@@ -80,7 +80,7 @@ export class ExplorerService {
           finalData.push(cur);
         }
       });
-      return finalData.slice(-Math.abs(event.numResults));
+      return this.ordenar(finalData.slice(-Math.abs(event.numResults)));
     }));
   }
 
@@ -95,6 +95,18 @@ export class ExplorerService {
         };
         return values;
       }));
+  }
+
+  ordenar(array) {
+    return array.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
+      return 0;
+    });
   }
 
 }

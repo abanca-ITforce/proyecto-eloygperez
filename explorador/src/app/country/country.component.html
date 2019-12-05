@@ -20,7 +20,12 @@
           <div *ngIf="extra$ | async as extra">
             <h3>Extra information:</h3>
             <span><strong>Population:</strong> {{ extra.population }}</span><br>
-            <span><strong>Interior Product:</strong> {{ extra.interiorProduct }}</span><br>
+            <span *ngIf="extra.interiorProduct; else noInteriorProduct"><strong>Interior Product:</strong>
+              {{ extra.interiorProduct }}
+            </span><br>
+            <ng-template #noInteriorProduct>
+              <h4>There is no available information for 'Interior Product'</h4>
+            </ng-template>
           </div>
         </mat-card-content>
       </mat-card>
