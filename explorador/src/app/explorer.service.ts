@@ -80,7 +80,7 @@ export class ExplorerService {
           finalData.push(cur);
         }
       });
-      return finalData;
+      return finalData.slice(-Math.abs(event.numResults));
     }));
   }
 

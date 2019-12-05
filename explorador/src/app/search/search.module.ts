@@ -13,6 +13,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { SharedModule } from '../shared/shared.module';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatDividerModule,
     MatListModule,
     MatProgressBarModule,
+    MatInputModule,
     SharedModule
   ]
 })
