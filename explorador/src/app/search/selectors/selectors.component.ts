@@ -17,7 +17,7 @@ export class SelectorsComponent implements OnInit {
     incomes: [null, []],
     lendings: [null, []],
     regions: [null, []],
-    numResults: [5, []]
+    numResults: [null, []]
   });
 
   constructor(private formBuilder: FormBuilder) {}
@@ -26,7 +26,6 @@ export class SelectorsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.searchForm.value);
     this.search.emit(this.searchForm.value);
   }
 
